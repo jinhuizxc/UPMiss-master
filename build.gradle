@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        jcenter()
+//        google()
+        maven{ url 'https://dl.google.com/dl/android/maven2'} // 访问google()
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.android.tools.build:gradle:2.3.3'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+//        google()
+        maven{ url 'https://dl.google.com/dl/android/maven2'} // 访问google()
+    }
+}
+
+// Define versions in a single place
+ext {
+    // App dependencies
+    supportLibraryVersion = '25.3.0'
+    junitVersion = '4.12'
+    dbflowVersion = '4.0.4'
+    geniusVersion = '2.0.0'
+    gsonVersion = '2.8.0'
+    volleyVersion = '1.0.19'
+    calligraphyVersion = '2.2.0'
+}
